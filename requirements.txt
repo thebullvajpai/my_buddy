@@ -1,0 +1,59 @@
+python-dotenv
+spotipy
+requests
+PyQt5
+SpeechRecognition
+pyaudio
+pyttsx3
+pywhatkit
+comtypes
+pycaw
+scikit-learn
+pandas
+numpy
+matplotlib
+scipy
+statsmodels
+scikit-image
+gTTS
+elevenlabs
+openai
+google-generativeai
+flask
+
+# requirements.txt — MyBuddy Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Speech Recognition (STT) ─────────────────────────────────────────────────
+SpeechRecognition==3.10.4       # core STT library
+PyAudio==0.2.14                 # microphone access (requires portaudio system library)
+                                # Windows: pip install pipwin && pipwin install pyaudio
+                                # Mac:     brew install portaudio
+                                # Linux:   sudo apt install portaudio19-dev
+
+# ── Local Whisper STT (optional, better accuracy) ────────────────────────────
+# Uncomment if you set STT_ENGINE = "whisper" in config.py
+# openai-whisper==20231117
+# torch==2.2.2                  # required by whisper (large download ~2GB)
+
+# ── Text-to-Speech ────────────────────────────────────────────────────────────
+edge-tts==6.1.10                # Microsoft neural voices (free, default)
+pyttsx3==2.90                   # offline TTS fallback
+
+# ── Audio Playback ────────────────────────────────────────────────────────────
+pygame==2.5.2                   # primary audio player (cross-platform)
+playsound==1.2.2                # fallback audio player
+
+# ── OpenAI (Q&A) ─────────────────────────────────────────────────────────────
+openai==1.35.7
+
+# ── Spotify ───────────────────────────────────────────────────────────────────
+spotipy==2.23.0
+
+# ── ElevenLabs TTS (optional premium voices) ──────────────────────────────────
+# Uncomment if you set TTS_ENGINE = "elevenlabs" in config.py
+# elevenlabs==1.2.2
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1            # optional: load API keys from a .env file
+requests==2.32.3                # HTTP (used by spotipy and openai internally)
